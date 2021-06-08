@@ -14,7 +14,7 @@ defmodule Flights.Schedule do
       |> File.stream!
       |> MyParser.parse_stream
       |> Stream.filter(fn [id, origin, destination, departureDate, departureTime,
-                          arrivalDate, arrivalTime, number] -> flight_id = id end)
+                          arrivalDate, arrivalTime, number] -> flight_id == id end)
       |> Stream.map(fn [id, origin, destination, departureDate, departureTime,
                        arrivalDate, arrivalTime, number] ->
       departureDateTime = formatDateTime(departureDate, departureTime)

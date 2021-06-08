@@ -1,18 +1,19 @@
-# Flights
+# Aviasales task: Elixir
+## Локальный запуск
+Для запуска Phoenix-сервера:
 
-To start your Phoenix server:
+  * Установить зависимости `mix deps.get`
+  * Запустить приложение `mix phx.server`
 
-  * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phx.server`
+Для получения информации о перелете нужно сделать запрос вида GET `https://localhost:4000/flights/:id`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Например, https://localhost:4000/flights/3 
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Решение
+Данное приложение реализовано с целью попробовать Elixir и Phoenix Framework 
+и решает задачу "в лоб". Информация о перелете читается из файла на каждый
+запрос пользователя.
 
-## Learn more
+Более оптимальное решение написано на Java и описано здесь 
+https://github.com/EkaterinaAntonyuk/aviasales-task-java
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
